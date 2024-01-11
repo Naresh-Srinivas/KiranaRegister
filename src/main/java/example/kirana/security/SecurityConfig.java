@@ -54,7 +54,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests()
-                .requestMatchers("/kirana/authenticate", "/kirana/new").permitAll()
+                .requestMatchers("/kirana/authenticate").permitAll()
                 .requestMatchers("/kirana/**").hasAuthority("USER")
                 .requestMatchers("/reports/monthly").hasAuthority("USER")
                 .requestMatchers("/transactions").hasAuthority("USER")
