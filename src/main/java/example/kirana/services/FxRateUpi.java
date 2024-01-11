@@ -14,7 +14,7 @@ public class FxRateUpi {
     static RestTemplate restTemplate = new RestTemplate();
 
     /**
-     * Fetch data from the API and cache the response using Spring's caching mechanism.
+     * Fetch data from the API and cache the response using Redis and Spring's caching mechanism.
      *
      * @param url The URL to fetch data from.
      * @return A Map containing the API response.
